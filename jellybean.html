@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grey Horizon Sunset Co. | Jiro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap');
+
+        body { 
+            background: #080808; 
+            color: #ffffff; 
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: border-color 0.4s ease;
+        }
+        .glass:hover { border-color: #d4a017; }
+
+        .gold-glow { color: #d4a017; text-shadow: 0 0 20px rgba(212, 160, 23, 0.3); }
+        
+        /* Smooth reveal for sections */
+        .reveal { opacity: 0; transform: translateY(30px); }
+
+        input, select, textarea {
+            background: #121212 !important;
+            border: 1px solid #333 !important;
+            color: white !important;
+            outline: none !important;
+        }
+        input:focus { border-color: #d4a017 !important; }
+    </style>
+</head>
+<body>
+
+    <section class="min-h-screen flex flex-col justify-center items-center text-center px-6 relative overflow-hidden">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#d4a017] opacity-10 blur-[120px] pointer-events-none"></div>
+        
+        <h1 class="text-6xl md:text-8xl font-black mb-6 tracking-tighter leading-none reveal">
+            GREY HORIZON<br><span class="gold-glow">SUNSET CO.</span>
+        </h1>
+
+        <p class="text-xl text-gray-400 max-w-2xl leading-relaxed mb-10 reveal">
+            Redefining sustainable packaging through biodegradable innovation, 
+            sensory design, and environmentally conscious engineering.
+        </p>
+
+        <div class="flex gap-6 flex-wrap justify-center reveal">
+            <a href="#products" class="bg-[#d4a017] text-black px-10 py-4 rounded-none font-bold hover:bg-white transition-all duration-300 uppercase tracking-widest text-sm">
+                Explore Products
+            </a>
+            <a href="#custom" class="border border-white/20 px-10 py-4 rounded-none hover:bg-white hover:text-black transition-all duration-300 uppercase tracking-widest text-sm">
+                Custom Orders
+            </a>
+        </div>
+    </section>
+
+    <section class="py-32 px-6 reveal">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="text-5xl font-black mb-8 tracking-tight uppercase">The Vision.</h2>
+                <p class="text-gray-300 text-lg leading-relaxed mb-6">
+                    Grey Horizon Sunset Co. was founded to transform sustainability 
+                    from obligation into **experience**.
+                </p>
+                <p class="text-gray-500 leading-relaxed border-l-2 border-[#d4a017] pl-6 italic">
+                    By blending Zambian biopolymers with Japanese scent-tech, we create 
+                    industrial materials that respect the earth and the user.
+                </p>
+            </div>
+
+            <div class="glass rounded-none p-12 border-t-4 border-[#d4a017]">
+                <h3 class="text-2xl font-bold mb-10 uppercase tracking-widest">Global Standards</h3>
+                <div class="space-y-10">
+                    <div>
+                        <h4 class="text-[#d4a017] text-xs font-black uppercase mb-1">Innovation</h4>
+                        <p class="text-gray-400 text-sm">Combining molecular sustainability with sensory engineering.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-green-500 text-xs font-black uppercase mb-1">Sustainability</h4>
+                        <p class="text-gray-400 text-sm">Replacing synthetic plastics with 100% degradable fibers.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-blue-400 text-xs font-black uppercase mb-1">Expansion</h4>
+                        <p class="text-gray-400 text-sm">Targeting full SADC distribution by 2030.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="products" class="py-32 px-6 bg-[#0a0a0a]">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-6xl font-black text-center mb-20 uppercase tracking-tighter reveal">Our Products</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="glass p-12 reveal border-b-2 border-transparent hover:border-[#d4a017]">
+                    <span class="text-xs font-bold text-[#d4a017] tracking-[0.3em] uppercase">Tech 01</span>
+                    <h3 class="text-4xl font-black mt-4 mb-6">HIKARI KASHA</h3>
+                    <p class="text-gray-400 mb-8 text-lg">UV-degradable premium carrier infused with Sakura fragrance.</p>
+                    <ul class="space-y-4 text-xs text-gray-500 uppercase tracking-widest">
+                        <li>— Premium Retail Standard</li>
+                        <li>— UV Breakdown Technology</li>
+                        <li>— 180-Day Earth Return</li>
+                    </ul>
+                </div>
+
+                <div class="glass p-12 reveal border-b-2 border-transparent hover:border-blue-500">
+                    <span class="text-xs font-bold text-blue-500 tracking-[0.3em] uppercase">Tech 02</span>
+                    <h3 class="text-4xl font-black mt-4 mb-6">KAPPA HYDRO</h3>
+                    <p class="text-gray-400 mb-8 text-lg">Hydro-degradable material infused with Yuzu citrus fragrance.</p>
+                    <ul class="space-y-4 text-xs text-gray-500 uppercase tracking-widest">
+                        <li>— Instant Water Breakdown</li>
+                        <li>— Agricultural Grade Polymer</li>
+                        <li>— Soil-Compatible Formula</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-32 px-6 text-center reveal">
+        <div class="max-w-4xl mx-auto glass p-20 relative">
+            <div class="absolute top-0 left-1/2 -translate-x-1/2 h-1 w-20 bg-[#d4a017]"></div>
+            <h2 class="text-sm font-black text-[#d4a017] uppercase tracking-[0.5em] mb-4">Capacity Monitor</h2>
+            <div class="text-7xl md:text-9xl font-black mb-6" id="stockCounter">100,000</div>
+            <p class="text-gray-500 uppercase text-xs tracking-widest mb-10">Current Weekly Manufacturing Load</p>
+            <button data-action="increase-stock" class="border border-white/10 px-8 py-4 text-xs font-bold uppercase tracking-widest hover:bg-white hover:text-black transition-all">
+                Simulate Production
+            </button>
+        </div>
+    </section>
+
+    <section id="custom" class="py-32 px-6 bg-[#0a0a0a]">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-5xl font-black mb-16 text-center uppercase">Order Request</h2>
+            <form id="custom-order-form" class="space-y-6 glass p-12">
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="text-[10px] uppercase font-bold text-gray-500 tracking-widest mb-2 block">Company</label>
+                        <input type="text" name="company" class="w-full p-4 rounded-none" placeholder="RETAILER NAME" required>
+                    </div>
+                    <div>
+                        <label class="text-[10px] uppercase font-bold text-gray-500 tracking-widest mb-2 block">Product</label>
+                        <select name="product" class="w-full p-4 rounded-none" required>
+                            <option value="">SELECT LINE</option>
+                            <option value="Hikari Kasha">Hikari Kasha (UV)</option>
+                            <option value="Kappa Hydro Fibre">Kappa Hydro Fibre (Hydro)</option>
+                        </select>
+                    </div>
+                </div>
+                <button type="submit" class="w-full bg-white text-black py-5 font-black uppercase tracking-[0.3em] text-sm hover:bg-[#d4a017] transition-colors">
+                    Submit Request
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="py-20 border-t border-white/5 text-center">
+        <p class="text-xs uppercase tracking-[0.5em] text-gray-600 mb-2">© 2026 Grey Horizon Sunset Co.</p>
+        <p class="text-[10px] uppercase tracking-widest text-[#d4a017] font-bold">Founder: Kunigami Jiro</p>
+    </footer>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Section Reveal Logic
+        document.querySelectorAll('.reveal').forEach((el) => {
+            gsap.to(el, {
+                scrollTrigger: {
+                    trigger: el,
+                    start: "top 85%",
+                    toggleActions: "play none none none"
+                },
+                opacity: 1,
+                y: 0,
+                duration: 1.2,
+                ease: "power4.out"
+            });
+        });
+
+        // Stock Counter Logic
+        let stock = 100000;
+        const stockBtn = document.querySelector('[data-action="increase-stock"]');
+        if (stockBtn) {
+            stockBtn.addEventListener('click', () => {
+                let target = stock + Math.floor(Math.random() * 5000);
+                let obj = { n: stock };
+                gsap.to(obj, {
+                    n: target,
+                    duration: 2,
+                    ease: "power3.out",
+                    onUpdate: () => {
+                        stock = Math.floor(obj.n);
+                        document.getElementById('stockCounter').innerText = stock.toLocaleString();
+                    }
+                });
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grey Horizon Sunset Co.</title>
+<link rel="stylesheet" href="styles/global.css">
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero min-h-screen flex flex-col justify-center items-center text-center px-6">
+
+    <h1 class="text-6xl md:text-7xl font-bold mb-6">
+        Grey Horizon Sunset Co.
+    </h1>
+
+    <p class="text-xl text-gray-300 max-w-3xl leading-relaxed mb-10">
+        Redefining sustainable packaging through biodegradable innovation,
+        sensory design, and environmentally conscious engineering.
+    </p>
+
+    <div class="flex gap-4 flex-wrap justify-center">
+
+        <a href="#products"
+        class="bg-pink-300 text-black px-8 py-4 rounded-full font-semibold hover:scale-105 transition">
+            Explore Products
+        </a>
+
+        <a href="#custom"
+        class="border border-white px-8 py-4 rounded-full hover:bg-white hover:text-black transition">
+            Custom Orders
+        </a>
+
+    </div>
+
+</section>
+
+<!-- ABOUT -->
+<section class="py-24 px-6">
+
+    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+
+        <div>
+
+            <h2 class="text-5xl font-bold mb-6">
+                About Us
+            </h2>
+
+            <p class="text-gray-300 text-lg leading-relaxed mb-6">
+                Grey Horizon Sunset Co. was founded to transform sustainability
+                from obligation into experience.
+            </p>
+
+            <p class="text-gray-400 leading-relaxed">
+                Through biodegradable technologies, premium fragrance infusion,
+                and emotionally engaging packaging, we aim to create products
+                customers naturally choose while contributing toward a greener future.
+            </p>
+
+        </div>
+
+        <div class="glass rounded-3xl p-10">
+
+            <h3 class="text-3xl font-semibold mb-8">
+                Company Vision
+            </h3>
+
+            <div class="space-y-6">
+
+                <div>
+                    <h4 class="text-pink-200 text-xl font-semibold">
+                        Innovation
+                    </h4>
+                    <p class="text-gray-400">
+                        Combining sustainability with sensory engineering.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="text-green-200 text-xl font-semibold">
+                        Sustainability
+                    </h4>
+                    <p class="text-gray-400">
+                        Developing degradable alternatives to synthetic plastics.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="text-yellow-200 text-xl font-semibold">
+                        Expansion
+                    </h4>
+                    <p class="text-gray-400">
+                        Scaling throughout the SADC region by 2030.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- PRODUCTS -->
+<section id="products" class="py-24 px-6">
+
+    <div class="max-w-7xl mx-auto">
+
+        <h2 class="text-5xl font-bold text-center mb-16">
+            Our Products
+        </h2>
+
+        <div class="grid md:grid-cols-2 gap-10">
+
+            <!-- HIKARI -->
+            <div class="glass rounded-3xl p-10 product-card">
+
+                <h3 class="text-4xl font-bold text-pink-200 mb-4">
+                    Hikari Kasha
+                </h3>
+
+                <p class="text-gray-300 mb-6">
+                    UV-degradable premium carrier infused with Sakura fragrance.
+                </p>
+
+                <ul class="space-y-3 text-gray-400">
+                    <li>✓ Premium Retail Packaging</li>
+                    <li>✓ Sensory Fragrance Integration</li>
+                    <li>✓ UV Degradable Technology</li>
+                    <li>✓ Boutique Product Positioning</li>
+                </ul>
+
+            </div>
+
+            <!-- KAPPA -->
+            <div class="glass rounded-3xl p-10 product-card">
+
+                <h3 class="text-4xl font-bold text-green-200 mb-4">
+                    Kappa Hydro Fibre
+                </h3>
+
+                <p class="text-gray-300 mb-6">
+                    Hydro-degradable material infused with Yuzu citrus fragrance.
+                </p>
+
+                <ul class="space-y-3 text-gray-400">
+                    <li>✓ Water Breakdown Technology</li>
+                    <li>✓ Organic Material Integration</li>
+                    <li>✓ Agricultural Potential</li>
+                    <li>✓ Future Soil-Compatible Research</li>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- LIVE STOCK TESTER -->
+<section class="py-24 px-6">
+
+    <div class="max-w-5xl mx-auto glass rounded-3xl p-12 text-center">
+
+        <h2 class="text-5xl font-bold mb-8">
+            Production Capacity Monitor
+        </h2>
+
+        <p class="text-gray-400 mb-10">
+            Simulated live manufacturing stock system.
+        </p>
+
+        <div class="counter text-green-300 mb-8" id="stockCounter">
+            100000
+        </div>
+
+        <button data-action="increase-stock"
+        class="bg-green-300 text-black px-6 py-3 rounded-full font-semibold hover:scale-105 transition">
+            Simulate Production
+        </button>
+
+    </div>
+
+</section>
+
+<!-- CUSTOM ORDER -->
+<section id="custom" class="py-24 px-6">
+
+    <div class="max-w-4xl mx-auto glass rounded-3xl p-12">
+
+        <h2 class="text-5xl font-bold mb-10 text-center">
+            Custom Order Request
+        </h2>
+
+        <form id="custom-order-form" class="space-y-6">
+
+            <div id="form-error" class="error-message"></div>
+
+            <div>
+                <label class="block mb-2 text-gray-300">
+                    Company Name
+                </label>
+
+                <input type="text"
+                name="company"
+                class="w-full p-4 rounded-xl"
+                placeholder="Your Company"
+                required>
+            </div>
+
+            <div>
+                <label class="block mb-2 text-gray-300">
+                    Product Type
+                </label>
+
+                <select name="product" class="w-full p-4 rounded-xl" required>
+                    <option value="">Select a product</option>
+                    <option value="Hikari Kasha">Hikari Kasha</option>
+                    <option value="Kappa Hydro Fibre">Kappa Hydro Fibre</option>
+                </select>
+            </div>
+
+            <div>
+                <label class="block mb-2 text-gray-300">
+                    Fragrance Preference
+                </label>
+
+                <select name="fragrance" class="w-full p-4 rounded-xl" required>
+                    <option value="">Select fragrance</option>
+                    <option value="Sakura Blossom">Sakura Blossom</option>
+                    <option value="Yuzu Citrus">Yuzu Citrus</option>
+                    <option value="Custom Fragrance">Custom Fragrance</option>
+                </select>
+            </div>
+
+            <div>
+                <label class="block mb-2 text-gray-300">
+                    Quantity Needed
+                </label>
+
+                <input type="number"
+                name="quantity"
+                class="w-full p-4 rounded-xl"
+                placeholder="10000"
+                min="1"
+                max="1000000"
+                required>
+            </div>
+
+            <div>
+                <label class="block mb-2 text-gray-300">
+                    Design Requirements
+                </label>
+
+                <textarea rows="5"
+                name="requirements"
+                class="w-full p-4 rounded-xl"
+                placeholder="Describe your custom branding or design request..."
+                maxlength="5000"></textarea>
+            </div>
+
+            <button type="submit"
+            class="w-full bg-pink-300 text-black py-4 rounded-xl font-bold hover:scale-[1.01] transition">
+                Submit Request
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer class="py-12 border-t border-gray-800 text-center text-gray-500">
+
+    <p>
+        © 2026 Grey Horizon Sunset Co.
+    </p>
+
+    <p class="mt-2">
+        Founder: Kunigami Jiro/Tumiso Mwendapole
+    </p>
+
+</footer>
+
+<script src="scripts/validation.js"></script>
+<script>
+let stock = 100000;
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Stock counter
+    const stockBtn = document.querySelector('[data-action="increase-stock"]');
+    if (stockBtn) {
+        stockBtn.addEventListener('click', () => {
+            stock += Math.floor(Math.random() * 5000);
+            document.getElementById('stockCounter').innerText = stock.toLocaleString() + ' Units';
+        });
+    }
+
+    // Form validation
+    setupFormValidation('custom-order-form', 'form-error', (data) => {
+        const company = FormValidator.validateCompanyName(data.company);
+        const product = FormValidator.validateProductType(data.product);
+        const fragrance = FormValidator.validateFragrance(data.fragrance);
+        const quantity = FormValidator.validateQuantity(data.quantity);
+        const requirements = FormValidator.sanitizeTextarea(data.requirements || '');
+
+        console.log('Form submitted with sanitized data:', { company, product, fragrance, quantity, requirements });
+        alert('Order request submitted successfully!');
+    });
+});
+</script>
+
+</body>
+</html>
